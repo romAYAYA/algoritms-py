@@ -34,3 +34,38 @@
 #
 #
 # test_arr_search()
+
+# def invert_arr(x: list) -> list:
+#     for i in range(len(x) // 2):
+#         x[i], x[len(x) - 1 - i] = x[len(x) - 1 - i], x[i]
+#     return x
+#
+#
+# print(invert_arr([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+
+# TODO Решето Эратосфена
+
+# N = 23
+# A = [True] * N
+# A[0] = A[1] = False
+#
+# for k in range(2, N):
+#     if A[k]:
+#         for m in range(2 * k, N, k):
+#             A[m] = False
+#
+# for i in range(N):
+#     print(i, '-', 'prime' if A[i] else 'composite')
+
+
+A = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+B = []
+
+for i in range(len(A)):
+    if A[i] % 2 == 0:
+        B.append(A[i] ** 2)
+
+print(B)
+
+C = [x ** 2 for x in A if x % 2 == 0]
+print(C)
